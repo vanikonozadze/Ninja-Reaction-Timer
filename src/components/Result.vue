@@ -1,6 +1,7 @@
 <template>
   <p>Reaction time: {{ score }} ms</p>
   <p class="rank">Ranking: {{ rankName }}</p>
+  <p v-if="highScoreBlock">High Score: {{ highScore }}</p>
 </template>
 
 <script>
@@ -9,7 +10,14 @@ export default {
   data() {
     return {
       rankName: null,
+      highScoreBlock: true,
     };
+  },
+  computed: {
+    highScore() {
+      // Get the high score from localStorage
+      return localStorage.getItem("highScore") || 0;
+    },
   },
   mounted() {
     if (this.score <= 250) {
@@ -18,6 +26,11 @@ export default {
       this.rankName = "HALF-NINJA";
     } else {
       this.rankName = "TURTLE";
+    }
+
+    if (this.score < this.highScore) {
+      // Update the high score in localStorage
+      localStorage.setItem("highScore", this.score);
     }
   },
 };
