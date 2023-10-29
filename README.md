@@ -4,10 +4,11 @@
 
 The Ninja Reaction Timer Game is a fun and interactive web-based game built with Vue.js. Test your reaction time by trying to click the fastest, as soon as it appears on the screen! This project is a great way to learn Vue.js and practice your reflexes.
 
-## Features
+## Usage
 
 - Click on the ninja button as soon as it appears to earn see your results.
-- Keep track of your reaction time.
+- Try to achieve the fastest reaction time and beat your high score.
+- Enjoy the game!
 
 ## Technologies Used
 
