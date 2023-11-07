@@ -1,7 +1,6 @@
 <template>
   <p>Reaction time: {{ score }} ms</p>
   <p class="rank">Ranking: {{ rankName }}</p>
-  <p v-if="highScoreBlock">High Score: {{ highScore }}</p>
 </template>
 
 <script>
